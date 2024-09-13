@@ -86,14 +86,14 @@ export function setXYAxis(
       symbol: 'x',
       label: xAxis?.groups?.label || (fileHeader.xUnitsType as string),
       units: xAxis?.groups?.units || '',
-      data: oX,
+      data: Object.values(oX),
       isDependent: false,
     },
     y: {
       symbol: 'y',
       label: yAxis?.groups?.label || fileHeader.yUnitsType,
       units: yAxis?.groups?.units || '',
-      data: oY,
+      data: Object.values(oY),
       isDependent: true,
     },
   };
